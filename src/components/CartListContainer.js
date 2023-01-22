@@ -38,6 +38,10 @@ const CartListContainer = () => {
     return cart.reduce((counter, cartItem) => counter + cartItem.total, 0);
   };
 
+  const handlerCreateOrder = () => {
+    generateJsonOrder(cart);
+  };
+
   return (
     <div className="cartList">
       <div className="cart">
@@ -51,7 +55,7 @@ const CartListContainer = () => {
             </div>
             <div className="cartFooter">
               <p>Total Order Price ${calculateTotalOrderPrice()}</p>
-              <button onClick={() => generateJsonOrder()}>Create Order</button>
+              <button onClick={() => handlerCreateOrder()}>Create Order</button>
             </div>
           </>
         ) : (
