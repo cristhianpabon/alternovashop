@@ -5,11 +5,11 @@ import { setProducts } from "../redux/slice/productsSlice";
 import ProductsListContainer from "../components/ProductsListContainer";
 import CartItem from "../components/CartItem";
 
-import "./ProductsPages.css";
+import "./ProductsPage.css";
 
 import productsJSON from "../data/products.json";
 
-function ProductsPages() {
+function ProductsPage() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
 
@@ -66,4 +66,4 @@ function ProductsPages() {
   );
 }
 
-export default ProductsPages;
+export default ProductsPage;
