@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/alternovashop/static/css/main.c9989331.css",
+    "main.js": "/alternovashop/static/js/main.4ac3f3ea.js",
+    "static/js/787.dd01eafb.chunk.js": "/alternovashop/static/js/787.dd01eafb.chunk.js",
+    "index.html": "/alternovashop/index.html",
+    "main.c9989331.css.map": "/alternovashop/static/css/main.c9989331.css.map",
+    "main.4ac3f3ea.js.map": "/alternovashop/static/js/main.4ac3f3ea.js.map",
+    "787.dd01eafb.chunk.js.map": "/alternovashop/static/js/787.dd01eafb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9989331.css",
+    "static/js/main.4ac3f3ea.js"
+  ]
+}
