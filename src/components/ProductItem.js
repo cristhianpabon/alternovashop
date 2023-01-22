@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../redux/slice/cartSlice";
+import { updateProductStock } from "../redux/slice/productsSlice";
 import "./ProductItem.css";
 
 import ProductCounterItem from "./ProductCounterItem";
@@ -22,6 +23,7 @@ const ProductItem = ({ name, stock, type, unit_price }) => {
           total: getTotalPrice(counter, unit_price),
         })
       );
+      dispatch(updateProductStock({ name, stock: counter }));
       setCounter(0);
     }
   };
