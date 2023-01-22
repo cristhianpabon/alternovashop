@@ -1,0 +1,145 @@
+.product {
+  background-color: #23262f;
+  width: 30%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.productImage {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.productImage img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.productContent {
+  max-width: 280px;
+  margin: auto;
+}
+
+.productContent h2 {
+  color: #fcfcfd;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.productStock {
+  color: #fcfcfd;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.productPrice {
+  color: #45b36b;
+  font-weight: 700;
+  font-size: 12px;
+  border: 3px solid #45b36b;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.productFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productCounter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productCounter button {
+  color: #777e91;
+  background-color: #fcfcfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.productCounter p {
+  color: #fcfcfd;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0px 5px;
+}
+
+.productAddButton {
+  color: #fcfcfd;
+  background-color: #777e91;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+@media (max-width: 925px) {
+
+  .product {
+    width: 100%;
+  }
+
+  .productContent h2 {
+    font-size: 1.25rem;
+  }
+
+  .productDetails {
+    margin-bottom: 20px;
+  }
+  .productStock {
+    font-size: 1.25rem;
+  }
+  
+  .productPrice {
+    font-size: 1.25rem;
+  }
+
+  .productFooter {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+
+  .productCounter {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .productCounter button {
+    width: 30%;
+    padding: 5px;
+    font-size: 1.25rem;
+  }
+  
+  .productCounter p {
+    font-size: 2rem;
+  }
+
+  .productAddButton {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  
+}
