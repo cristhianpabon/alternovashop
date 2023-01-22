@@ -1,29 +1,25 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "../redux/slice/cartSlice";
 import "./CartItem.css";
 
-function CartItem() {
-  //   const { value } = useSelector((state) => state.cart);
-  //   console.log(value);
+const CartItem = ({ name, quantity, unitPrice, total }) => {
   return (
     <ul className="cartItem">
       <ul>
-        <li>Iphone 14 Pro Max</li>
+        <li>{name}</li>
         <li>
-          <span>Cantidad:</span> 5
+          <span>Cantidad:</span> {quantity}
         </li>
       </ul>
       <ul>
         <li>
-          <span>Unit Price:</span> $5000
+          <span>Unit Price:</span> ${unitPrice}
         </li>
         <li>
-          <span>Total:</span> $25000
+          <span>Total:</span> ${total}
         </li>
       </ul>
     </ul>
   );
-}
+};
 
 export default CartItem;
