@@ -14,7 +14,6 @@ export const productsSlice = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { setProducts } = productsSlice.actions
 
 export default productsSlice.reducer
