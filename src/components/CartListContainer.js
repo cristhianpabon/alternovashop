@@ -8,6 +8,32 @@ import "./CartListContainer.css";
 const CartListContainer = () => {
   const { cart } = useSelector((state) => state.cart);
 
+  const getFormattedDate = () => {
+    const date = new Date();
+    return (
+      date.getMilliseconds() +
+      date.getSeconds() +
+      "_" +
+      date.getDate() +
+      "_" +
+      (date.getMonth() + 1) +
+      "_" +
+      date.getFullYear()
+    );
+  };
+
+  const generateJsonOrder = (orderList) => {
+    const date = getFormattedDate();
+    const element = document.createElement("a");
+    const textFile = new Blob([JSON.stringify(orderList)], {
+      type: "text/plain",
+    });
+    element.href = URL.createObjectURL(textFile);
+    element.download = `order${date}.json`;
+    document.body.appendChild(element);
+    element.click();
+  };
+
   return (
     <div className="cartList">
       <div className="cart">
@@ -21,7 +47,7 @@ const CartListContainer = () => {
             </div>
             <div className="cartFooter">
               <p>Total Order Price</p>
-              <button>Create Order</button>
+              <button onClick={() => generateJsonOrder()}>Create Order</button>
             </div>
           </>
         ) : (
