@@ -27,28 +27,35 @@ const ProductItem = ({ name, stock, type, unit_price }) => {
   };
 
   return (
-    <div className="product">
-      <div className="productImage">
-        <img src="./dummyphoto.png" alt="dummyphoto" />
-      </div>
-      <div className="productContent">
-        <h2>{name}</h2>
-        <div className="productDetails">
-          <p className="productStock">{stock}</p>
-          <p className="productPrice">{unit_price}</p>
+    <div className="productContainer">
+      {!stock && (
+        <div className="noStockStyles">
+          <p>No Stock</p>
         </div>
-        <div className="productFooter">
-          <ProductCounterItem
-            counter={counter}
-            setCounter={setCounter}
-            availableStock={stock}
-          />
-          <button
-            onClick={() => handleAddCartButton()}
-            className="productAddButton"
-          >
-            Add to cart
-          </button>
+      )}
+      <div className={"product " + (!stock && "halfOpacity")}>
+        <div className="productImage">
+          <img src="./dummyphoto.png" alt="dummyphoto" />
+        </div>
+        <div className="productContent">
+          <h2>{name}</h2>
+          <div className="productDetails">
+            <p className="productStock">{stock}</p>
+            <p className="productPrice">{unit_price}</p>
+          </div>
+          <div className="productFooter">
+            <ProductCounterItem
+              counter={counter}
+              setCounter={setCounter}
+              availableStock={stock}
+            />
+            <button
+              onClick={() => handleAddCartButton()}
+              className="productAddButton"
+            >
+              Add to cart
+            </button>
+          </div>
         </div>
       </div>
     </div>
