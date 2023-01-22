@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { setProducts } from "../redux/slice/productsSlice";
 
 import ProductsListContainer from "../components/ProductsListContainer";
-import CartItem from "../components/CartItem";
+import CartListContainer from "../components/CartListContainer";
 
 import "./ProductsPage.css";
 
@@ -47,20 +47,7 @@ function ProductsPage() {
       </header>
       <main>
         <ProductsListContainer />
-        <div className="cartList">
-          <div className="cart">
-            <div>
-              <h2>CART</h2>
-              <CartItem />
-              <CartItem />
-              <CartItem />
-            </div>
-            <div className="cartFooter">
-              <p>Total Order Price</p>
-              <button>Create Order</button>
-            </div>
-          </div>
-        </div>
+        <CartListContainer />
       </main>
     </div>
   );
