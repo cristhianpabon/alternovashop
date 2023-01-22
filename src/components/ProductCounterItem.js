@@ -9,8 +9,7 @@ const ProductCounterItem = ({ counter, setCounter, availableStock }) => {
   };
 
   const handleDecrementCounter = () => {
-    const isNegativeNumber = counter - 1;
-    if (isNegativeNumber > 0) {
+    if (counter > 0 && counter !== 0) {
       setCounter(counter - 1);
     }
   };
