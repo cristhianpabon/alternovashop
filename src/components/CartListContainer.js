@@ -51,7 +51,9 @@ const CartListContainer = () => {
             </div>
           </>
         ) : (
-          <p>Your cart is empty..</p>
+          <div className="emptyCartStyles">
+            <p>Your cart is empty..</p>
+          </div>
         )}
       </div>
     </div>

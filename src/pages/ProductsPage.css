@@ -16,6 +16,16 @@ main {
   align-items: flex-start;
 }
 
+.loaderStyle {
+  color: #f4f5f6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 @media (max-width: 925px) {
   main {
     flex-direction: column;

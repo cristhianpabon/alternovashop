@@ -14,6 +14,7 @@
   margin-right: 10px;
   min-height: 500px;
   padding: 10px;
+  position: relative;
 }
 
 .cart h2 {
@@ -44,9 +45,22 @@
   font-weight: 600;
 }
 
+.emptyCartStyles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.emptyCartStyles p {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
 @media (max-width: 925px) {
   .cartList {
     width: 100%;
+    padding: 0px 30px;
   }
 
   .cartFooter {

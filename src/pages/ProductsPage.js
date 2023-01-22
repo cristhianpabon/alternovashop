@@ -35,7 +35,7 @@ function ProductsPage() {
   }, [dispatch]);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <p className="loaderStyle">Loading..</p>;
   }
 
   return (
